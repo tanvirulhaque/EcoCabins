@@ -51,6 +51,7 @@ if ( ! function_exists( 'ecocabins_setup' ) ) :
 		register_nav_menus(
 			array(
 				'main-menu' => esc_html__( 'Main Menu', 'ecocabins' ),
+				'footer-menu' => esc_html__( 'Footer Menu', 'ecocabins' ),
 			)
 		);
 
@@ -94,8 +95,8 @@ if ( ! function_exists( 'ecocabins_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
+				'height'      => 30,
+				'width'       => 150,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)

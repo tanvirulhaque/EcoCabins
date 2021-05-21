@@ -12,19 +12,48 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ecocabins' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ecocabins' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ecocabins' ), 'ecocabins', '<a href="http://wpxpress.net">Tanvirul Haque</a>' );
-				?>
-		</div><!-- .site-info -->
+		
+		<div class="container">	
+			<div class="row align-items-center justify-content-between">
+
+				<div class="col-md-4 col-sm-12">
+					<div class="site-info">
+						<a href="mailto:info@eco-cabins.com"><?php esc_html_e( 'info@eco-cabins.com', 'ecocabins'); ?></a>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-12">
+					<div class="footer-logo">
+						<?php
+						if ( has_custom_logo() ) {
+							the_custom_logo();
+						} else {
+							echo '<a class="footer-brand" href="'.esc_url( home_url( '/' ) ).'"><img src="'.get_template_directory_uri().'/assets/images/logo.svg" alt="EcoCabins"></a>';
+						}
+						?>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-12">
+					<?php
+					if ( has_nav_menu( 'footer-menu' ) ) {
+				        wp_nav_menu(
+				            array(
+				                'theme_location' => 'footer-menu',
+								'menu_id'        => 'footer-menu',
+								'menu_class'        => 'footer-menu',
+				                'container'      => false
+				            )
+				        );
+				    } else {
+				        echo '<ul class="' . esc_attr( 'footer-menu' ) . '"><li class="menu-item"><a href="' . admin_url( 'nav-menus.php' ) . '">' . esc_html__( 'Add A Footer Menu', 'ecocabins' ) . '</a></li></ul>';
+				    }
+					?>
+				</div>
+
+			</div>
+		</div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

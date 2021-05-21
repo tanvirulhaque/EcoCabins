@@ -9073,6 +9073,49 @@ textarea.form-control-lg {
   .site-header .navbar .navbar-toggler {
     border-color: #fff; }
 
+.site-footer {
+  background-color: #222f33;
+  padding: 35px 0; }
+  @media only screen and (max-width: 767px) {
+    .site-footer {
+      text-align: center; } }
+  .site-footer a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0.6;
+    text-decoration: none; }
+    .site-footer a:hover {
+      opacity: 1;
+      color: #fff; }
+  @media only screen and (max-width: 767px) {
+    .site-footer .footer-logo {
+      padding: 20px 0; } }
+  .site-footer .footer-logo a {
+    opacity: 1; }
+    .site-footer .footer-logo a img {
+      display: block;
+      margin: auto; }
+  .site-footer .footer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right; }
+    @media only screen and (max-width: 767px) {
+      .site-footer .footer-menu {
+        text-align: center; } }
+    .site-footer .footer-menu li {
+      display: inline-block; }
+      .site-footer .footer-menu li a {
+        padding: 0 15px;
+        color: #fff; }
+        @media only screen and (max-width: 767px) {
+          .site-footer .footer-menu li a {
+            padding: 0 8px; } }
+      .site-footer .footer-menu li:last-child a {
+        padding-right: 0; }
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -9702,10 +9745,6 @@ textarea {
 --------------------------------------------- */
 .sticky {
   display: block; }
-
-.post,
-.page {
-  margin: 0 0 1.5em; }
 
 .updated:not(.published) {
   display: none; }
