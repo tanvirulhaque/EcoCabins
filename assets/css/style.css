@@ -9019,6 +9019,60 @@ textarea.form-control-lg {
     display: inline-flex !important; }
   .d-print-none {
     display: none !important; } }
+.site-header .navbar {
+  background: #f1f1f1;
+  padding: 35px 0; }
+  .site-header .navbar .navbar-brand {
+    padding: 0; }
+    .site-header .navbar .navbar-brand img {
+      display: block; }
+  .site-header .navbar .navbar-collapse {
+    -webkit-box-flex: unset;
+    -webkit-flex-grow: unset;
+            flex-grow: unset; }
+    @media only screen and (max-width: 767px) {
+      .site-header .navbar .navbar-collapse {
+        margin-top: 30px;
+        padding: 0 50px; } }
+  @media only screen and (max-width: 767px) {
+    .site-header .navbar .navbar-nav {
+      margin: 0; } }
+  .site-header .navbar .navbar-nav li:last-child.menu-btn .nav-link {
+    margin-right: 0; }
+  .site-header .navbar .nav-link {
+    font-family: 'Rubik', serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: center;
+    padding: 10px 20px;
+    color: #fff; }
+    .site-header .navbar .nav-link:hover {
+      background-color: #fff;
+      border-radius: 4px;
+      color: #606B74; }
+  .site-header .navbar .menu-btn .nav-link {
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 0 20px;
+    color: #606B74; }
+    @media only screen and (max-width: 767px) {
+      .site-header .navbar .menu-btn .nav-link {
+        margin: 0; } }
+  .site-header .navbar .dropdown-menu {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Rubik', serif;
+    border-color: rgba(0, 0, 0, 0.05); }
+  .site-header .navbar .dropdown-item {
+    padding: 5px 15px; }
+    .site-header .navbar .dropdown-item.active, .site-header .navbar .dropdown-item:active {
+      background-color: transparent;
+      color: #606B74; }
+  .site-header .navbar .navbar-toggler {
+    border-color: #fff; }
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
