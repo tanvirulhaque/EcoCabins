@@ -9063,12 +9063,13 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 /* Sections
-	 ========================================================================== */
+ ========================================================================== */
 /**
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Rubik', serif; }
 
 /**
  * Render the `main` element consistently in IE.
@@ -9361,7 +9362,9 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both; }
+  clear: both;
+  font-family: 'Merriweather', serif;
+  font-weight: 900; }
 
 p {
   margin-bottom: 1.5em; }

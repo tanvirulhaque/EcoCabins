@@ -137,9 +137,34 @@ function ecocabins_widgets_init() {
 add_action( 'widgets_init', 'ecocabins_widgets_init' );
 
 /**
+ * Enqueue Google Fonts
+ * @return string
+ */
+function ecocabins_google_fonts_url() {
+
+	$fonts_url = '';
+
+	$font_families = array();
+
+	$font_families[] = 'Rubik:300,400,500,700';
+	$font_families[] = 'Merriweather:400,700,900';
+
+	$query_args = array(
+		'family' => urlencode( implode( '|', $font_families ) ),
+		'subset' => urlencode( 'latin,latin-ext' ),
+	);
+
+	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+	return esc_url_raw( $fonts_url );
+}
+
+
+/**
  * Enqueue scripts and styles.
  */
 function ecocabins_scripts() {
+	wp_enqueue_style( 'google-fonts', ecocabins_google_fonts_url(), array(), null );
 	wp_enqueue_style( 'ecocabins-style', get_template_directory_uri() . '/assets/css/style.min.css', array(), _S_VERSION );
 
 	wp_enqueue_script( 'ecocabins-scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), _S_VERSION, true );
