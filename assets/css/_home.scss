@@ -1,3 +1,4 @@
+// Home Hero Style
 .home-hero-section {
     background-size: 100%;
     background-position: center;
@@ -23,7 +24,7 @@
 	}
 
 	.home-hero-heading {
-	    padding-right: 50px;
+	    padding-right: 80px;
 	}
 
 	.home-hero-sub-title {
@@ -97,5 +98,103 @@
 			}
 		}
 	}
+}
 
+// Home About Style
+.home-about-section {
+	.home-about-heading {
+		font-size: 30px;
+		line-height: 38px;
+	    margin-bottom: 15px;
+	}
+
+	.home-about-text {
+	    color: #646D70;
+	    font-size: 14px;
+	    line-height: 26px;
+
+	    .btn {
+		    font-family: Rubik;
+		    font-style: normal;
+		    font-weight: 500;
+		    font-size: 12px;
+		    line-height: 14px;
+		    padding: 10px 25px;
+		}
+	}
+
+	.home-about-top {
+		position: relative;
+
+		&:after {
+		    position: absolute;
+		    content: "";
+		    background: #222F33;
+		    width: 35%;
+		    height: 100px;
+		    right: 0;
+		    bottom: 0;
+		    z-index: -1;
+
+		    @media only screen and (max-width: 767px) {
+				position: static;
+    			padding-bottom: 60px;
+		    }
+		}
+
+		.home-about-text {
+			padding: 60px 390px 30px 0;
+
+			@media only screen and (max-width: 1199px) {
+				padding: 60px 60px 30px 0;
+			}
+
+			@media only screen and (min-width: 768px) and (max-width: 991px) {
+				padding: 60px 0;
+			}
+
+			@media only screen and (max-width: 767px) {
+				padding: 60px 0;
+			}
+		}
+
+		.home-about-slider {
+		    position: relative;
+		    top: -50px;
+		    left: -50px;
+
+		    @media only screen and (min-width: 768px) and (max-width: 991px) {
+				top: -25px;
+		    	left: 0;
+			}
+
+			@media only screen and (max-width: 767px) {
+		    	position: static;
+    			padding-bottom: 60px;
+		    }
+
+		    .carousel-indicators [data-bs-target] {
+			    width: 8px;
+			    height: 8px;
+			    max-width: 0 8px;
+			    border-radius: 100%;
+			}
+		}
+	}
+
+	.home-about-bottom {
+		background-color: #222F33;
+		padding: 75px 0;
+
+		.home-about-heading {
+			color: #fff;
+		}
+
+		.home-about-text {
+		    color: #fff;
+		    p {
+		    	opacity: .7;
+		    }
+		}
+	}
 }
