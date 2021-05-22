@@ -13204,7 +13204,7 @@ textarea.form-control-lg {
       border-color: #fff; }
 
 .home-hero-section {
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -13212,7 +13212,6 @@ textarea.form-control-lg {
   padding: 200px 0 250px; }
   @media only screen and (max-width: 767px) {
     .home-hero-section {
-      background-size: cover;
       padding: 150px 0; } }
   .home-hero-section .overlay {
     position: absolute;
@@ -13356,6 +13355,31 @@ textarea.form-control-lg {
     color: #fff; }
     .home-about-section .home-about-bottom .home-about-text p {
       opacity: .7; }
+
+.home-feature-section {
+  padding: 75px 0; }
+  @media only screen and (max-width: 767px) {
+    .home-feature-section .home-feature-img img {
+      margin: 0 auto 40px; } }
+  .home-feature-section .home-feature-content-box {
+    padding-right: 40px;
+    padding-bottom: 35px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .home-feature-section .home-feature-content-box {
+        padding-right: 0; } }
+    @media only screen and (max-width: 767px) {
+      .home-feature-section .home-feature-content-box {
+        padding: 30px 30px 15px; } }
+    .home-feature-section .home-feature-content-box .feature-content-box-title {
+      font-size: 18px;
+      line-height: 23px;
+      color: #222F33; }
+    .home-feature-section .home-feature-content-box p {
+      font-size: 12px;
+      line-height: 22px;
+      color: #646D70;
+      opacity: 0.7;
+      margin-bottom: 0; }
 
 .site-footer {
   background-color: #222f33;

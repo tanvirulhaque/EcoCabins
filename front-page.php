@@ -123,4 +123,74 @@
 </section>
 <!-- Home About Section End -->
 
+
+<!-- Home Feature Section Start -->
+<div class="home-feature-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6">
+				<div class="home-feature-img">
+					<img src="<?php echo get_template_directory_uri() . '/assets/images/feature.png' ?>" class="d-block" alt="Feature Image">
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="home-feature-content">
+					
+					<div class="row">
+
+						<div class="col-md-6 col-sm-6">
+							<div class="home-feature-content-box">
+								<h3 class="feature-content-box-title">Hout</h3>
+								<p>De draagconstructies van EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+							<div class="home-feature-content-box">
+								<h3 class="feature-content-box-title">Glaswol isolatie</h3>
+								<p>De combinatie van glaswol met een houtskelet constructie geeft een.</p>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+							<div class="home-feature-content-box">
+								<h3 class="feature-content-box-title">Afwerking</h3>
+								<p>De draagconstructies van EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+							<div class="home-feature-content-box">
+								<h3 class="feature-content-box-title">Triple glas</h3>
+								<p>De combinatie van glaswol met een houtskelet constructie geeft een.</p>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+							<div class="home-feature-content-box">
+								<h3 class="feature-content-box-title">Stalen onderstel</h3>
+								<p>Het stalen onderstel is sterk zijn en heeft de benodigde stijfheid die</p>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+							<div class="home-feature-content-box">
+								<h3 class="feature-content-box-title">Infrarood vloer</h3>
+								<p>De vloer wordt opgewarmd middels opgewekte warmte uit eigen zonne-energie.</p>
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- Home Feature Section End -->
+
 <?php get_footer(); ?>

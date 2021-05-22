@@ -1,6 +1,6 @@
 // Home Hero Style
 .home-hero-section {
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -8,7 +8,6 @@
     padding: 200px 0 250px;
 
     @media only screen and (max-width: 767px) {
-		background-size: cover;
 		padding: 150px 0;
 	}
 
@@ -195,6 +194,46 @@
 		    p {
 		    	opacity: .7;
 		    }
+		}
+	}
+}
+
+// Home Feature Style
+.home-feature-section {
+    padding: 75px 0;
+
+    .home-feature-img {
+    	img {
+		    @media only screen and (max-width: 767px) {
+		    	margin: 0 auto 40px;	
+		    }
+		}
+    }
+
+	.home-feature-content-box {
+		padding-right: 40px;
+    	padding-bottom: 35px;
+
+    	@media only screen and (min-width: 768px) and (max-width: 991px) {
+			padding-right: 0;
+		}
+
+    	@media only screen and (max-width: 767px) {
+	    	padding: 30px 30px 15px;
+	    }
+
+		.feature-content-box-title {
+		    font-size: 18px;
+		    line-height: 23px;
+		    color: #222F33;
+		}
+
+		p {
+			font-size: 12px;
+			line-height: 22px;
+			color: #646D70;
+			opacity: 0.7;
+			margin-bottom: 0;
 		}
 	}
 }
