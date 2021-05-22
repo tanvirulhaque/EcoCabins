@@ -16,10 +16,14 @@
 	    .navbar-collapse {
 	    	flex-grow: unset;
 
-	    	@media only screen and (max-width: 767px) {
-				margin-top: 30px;
-	    		padding: 0 50px;
-			}
+	    	> ul {
+	    		@media only screen and (max-width: 767px) {
+					margin-top: 30px;
+				    padding: 30px 50px;
+				    background: #000;
+				}
+	    	}
+	    	
 	    }
 
 	    

@@ -13161,9 +13161,10 @@ textarea.form-control-lg {
       -webkit-flex-grow: unset;
               flex-grow: unset; }
       @media only screen and (max-width: 767px) {
-        .site-header .navbar .navbar-collapse {
+        .site-header .navbar .navbar-collapse > ul {
           margin-top: 30px;
-          padding: 0 50px; } }
+          padding: 30px 50px;
+          background: #000; } }
     @media only screen and (max-width: 767px) {
       .site-header .navbar .navbar-nav {
         margin: 0; } }
