@@ -10,6 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php ecocabins_post_thumbnail(); ?>
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -29,31 +32,34 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php ecocabins_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ecocabins' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+		if ( is_singular() ) {
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ecocabins' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					wp_kses_post( get_the_title() )
+				)
+			);
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ecocabins' ),
-				'after'  => '</div>',
-			)
-		);
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ecocabins' ),
+					'after'  => '</div>',
+				)
+			);
+		} else {
+			the_excerpt();
+			echo '<a href="'.esc_url( get_permalink() ).'" class="btn btn-outline-dark">'.esc_html__( 'Read More', 'ecocabins' ).'</a>';
+		}
 		?>
 	</div><!-- .entry-content -->
 

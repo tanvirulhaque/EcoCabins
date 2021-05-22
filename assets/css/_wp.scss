@@ -18,8 +18,6 @@
 	- Media
 	- Captions
 	- Galleries
-# plugins
-	- Jetpack infinite scroll
 # Utilities
 	- Accessibility
 	- Alignments
@@ -55,7 +53,6 @@ html {
  */
 body {
 	margin: 0;
-	font-family: 'Rubik', serif;
 }
 
 /**
@@ -379,10 +376,10 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
-	line-height: 1.5;
+	color: #646d70;
+	font-family: 'Rubik', serif;
+	font-size: 14px;
+    line-height: 26px;
 }
 
 h1,
@@ -394,6 +391,9 @@ h6 {
 	clear: both;
 	font-family: 'Merriweather', serif;
 	font-weight: 900;
+	a {
+		color: #646d70;
+	}
 }
 
 p {
@@ -463,11 +463,12 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0;
+	padding: 0;
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 ol {
@@ -515,23 +516,10 @@ a {
 	color: #4169e1;
 }
 
-a:visited {
-	color: #800080;
-}
-
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
+	color: #333;
 }
 
 /* Forms
@@ -731,6 +719,55 @@ textarea {
 	// margin: 0 0 1.5em;
 }
 
+article.post,
+article.page {
+	background-color: #f9f9f9;
+	padding: 25px;
+	margin-bottom: 30px;
+
+	.post-thumbnail {
+	    margin-bottom: 25px;
+	    display: block;
+	}
+
+	.entry-title {
+		font-size: 28px;
+	    line-height: 36px;
+	    word-break: break-word;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.entry-meta {
+	    font-size: 90%;
+
+	    > span {
+		    margin-right: 15px;
+		    display: inline-block;
+
+		    i {
+    			margin-right: 7px;
+			}
+		}
+
+	    a {
+	    	color: #646d70;
+	    	text-decoration: none;
+	    }
+	}
+
+	.btn {
+		font-family: Rubik;
+	    font-style: normal;
+	    font-weight: 500;
+	    font-size: 12px;
+	    line-height: 14px;
+	    padding: 10px 25px;
+	}
+}
+
 .updated:not(.published) {
 	display: none;
 }
@@ -738,12 +775,12 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 0 0 1em;
 }
 
 /* Comments
@@ -759,11 +796,22 @@ textarea {
 /* Widgets
 --------------------------------------------- */
 .widget {
-	margin: 0 0 1.5em;
-}
+	background-color: #f9f9f9;
+	padding: 25px;
+	margin-bottom: 30px;
 
-.widget select {
-	max-width: 100%;
+	a {
+    	color: #646d70;
+    }
+
+    select {
+		max-width: 100%;
+	}
+
+	.widget-title {
+		font-size: 28px;
+	    line-height: 36px;
+	}
 }
 
 /* Media
@@ -854,24 +902,6 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	display: none;
-}
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
-
-/*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
 
@@ -945,4 +975,38 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+// Archive Pagination
+/* Archive Pagination */
+.navigation {
+	&.pagination {
+	    display: block;
+	    text-align: center;
+
+	    .nav-links {
+	    	.page-numbers {
+			    font-size: 12px;
+			    font-weight: 500;
+			    line-height: 14px;
+			    background: #eee;
+			    display: inline-block;
+			    padding: 10px 16px;
+			    border-radius: 3px;
+			    color: #303030;
+			    text-decoration: none;
+			    margin-right: 3px;
+
+			    &.current,
+			    &:not(.dots):hover {
+				    color: #fff;
+				    background: #646d70;
+				}
+
+				&.dots {
+				    background: transparent;
+				}
+			}
+	    }
+	}
 }
