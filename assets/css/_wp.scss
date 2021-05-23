@@ -732,6 +732,10 @@ article.page {
 	    font-size: 12px;
 	    line-height: 14px;
 	    padding: 10px 25px;
+
+	    &:hover {
+	    	color: #fff;
+	    }
 	}
 }
 

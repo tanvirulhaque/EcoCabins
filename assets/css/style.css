@@ -13789,6 +13789,9 @@ article.page {
     font-size: 12px;
     line-height: 14px;
     padding: 10px 25px; }
+    article.post .btn:hover,
+    article.page .btn:hover {
+      color: #fff; }
 
 body.page .entry-content, body.single .entry-content {
   margin: 1.6em 0; }
