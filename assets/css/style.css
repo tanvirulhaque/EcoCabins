@@ -13784,6 +13784,7 @@ article.page {
   article.post .btn,
   article.page .btn {
     font-family: Rubik;
+    color: #fff;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
@@ -13824,11 +13825,112 @@ body.page .entry-content, body.single .entry-content {
 
 /* Comments
 --------------------------------------------- */
-.comment-content a {
-  word-wrap: break-word; }
+.comments-area {
+  padding-top: 20px; }
+  .comments-area a {
+    color: #212529; }
 
 .bypostauthor {
   display: block; }
+
+.comments-title {
+  margin-bottom: 25px;
+  font-size: 24px; }
+
+.comment-list {
+  max-width: 730px; }
+
+.comment-list,
+.children {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0; }
+
+.children {
+  padding-left: 30px; }
+
+.says {
+  display: none; }
+
+.comment-author.vcard img {
+  float: left;
+  border-radius: 50%;
+  margin-right: 18px; }
+
+.comment-content {
+  padding-left: 50px; }
+  .comment-content a {
+    word-wrap: break-word; }
+
+b.fn {
+  font-size: 16px;
+  text-transform: capitalize;
+  font-family: 'Merriweather';
+  font-weight: 600; }
+
+.comment-body {
+  background: #f9f9f9;
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 3px; }
+
+.comment-metadata {
+  font-size: 80%;
+  margin-bottom: 10px; }
+
+.reply {
+  text-align: right; }
+  .reply a {
+    font-weight: 600;
+    position: relative; }
+    .reply a:before {
+      position: absolute;
+      content: "\f520";
+      left: -20px;
+      top: -8px;
+      font-family: bootstrap-icons;
+      font-size: 16px; }
+
+.comment-form p label {
+  display: block; }
+
+.comment-form p.comment-form-cookies-consent label {
+  display: inline; }
+
+.comment-form p.comment-form-cookies-consent input {
+  width: auto; }
+
+.comment-form p > input,
+.comment-form p textarea {
+  padding: 10px 15px;
+  resize: none;
+  width: 100%; }
+
+.comment-form p > input[type=submit] {
+  background: transparent;
+  color: #212529;
+  border: 1px solid #212529;
+  padding: 10px 25px;
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+  width: auto;
+  -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out; }
+  .comment-form p > input[type=submit]:hover {
+    background: #212529;
+    color: #fff; }
+
+.comment-reply-title {
+  font-size: 26px; }
+  .comment-reply-title small a {
+    margin-left: 15px;
+    color: red;
+    opacity: .7;
+    text-transform: capitalize;
+    font-size: 70%; }
 
 /* Widgets
 --------------------------------------------- */
@@ -14017,7 +14119,8 @@ body.page .entry-content, body.single .entry-content {
     border-radius: 3px;
     color: #303030;
     text-decoration: none;
-    margin-right: 3px; }
+    margin-right: 3px;
+    border: none; }
     .navigation.pagination .nav-links .page-numbers.current, .navigation.pagination .nav-links .page-numbers:not(.dots):hover {
       color: #fff;
       background: #646d70; }

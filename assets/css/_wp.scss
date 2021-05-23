@@ -727,6 +727,7 @@ article.page {
 
 	.btn {
 		font-family: Rubik;
+		color: #fff;
 	    font-weight: 500;
 	    font-size: 12px;
 	    line-height: 14px;
@@ -789,13 +790,157 @@ body {
 
 /* Comments
 --------------------------------------------- */
-.comment-content a {
-	word-wrap: break-word;
+.comments-area {
+    padding-top: 20px;
+
+    a {
+		color: #212529;
+	}
 }
 
 .bypostauthor {
 	display: block;
 }
+
+.comments-title {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.comment-list {
+    max-width: 730px;
+}
+
+.comment-list,
+.children {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.children {
+    padding-left: 30px;
+}
+
+.says {
+    display: none;
+}
+
+.comment-author {
+	&.vcard {
+		img {
+			float: left;
+			border-radius: 50%;
+    		margin-right: 18px;
+		}
+	}
+}
+
+.comment-content {
+	padding-left: 50px;
+
+	a {
+		word-wrap: break-word;
+	}
+}
+
+b.fn {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: 'Merriweather';
+    font-weight: 600;
+}
+
+.comment-body {
+    background: #f9f9f9;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 3px;
+}
+
+.comment-metadata {
+    font-size: 80%;
+    margin-bottom: 10px;
+}
+
+.reply {
+    text-align: right;
+
+    a {
+	    font-weight: 600;
+	    position: relative;
+
+	    &:before {
+	    	position: absolute;
+		    content: "\f520";
+		    left: -20px;
+		    top: -8px;
+		    font-family: bootstrap-icons;
+		    font-size: 16px;
+		}
+	}
+}
+
+.comment-form {
+	p {
+		label {
+			display: block;
+		}
+
+		&.comment-form-cookies-consent {
+			label {
+				display: inline;
+			}
+
+			input {
+				width: auto;
+			}
+		}
+
+		> input,
+		textarea {
+		    padding: 10px 15px;
+		    resize: none;
+		    width: 100%;
+		}
+
+		> input {
+			&[type=submit] {
+			    background: transparent;
+			    color: #212529;
+			    border: 1px solid #212529;
+			    padding: 10px 25px;
+			    display: inline-block;
+			    border-radius: 3px;
+			    text-decoration: none;
+			    font-size: 12px;
+			    line-height: 14px;
+			    width: auto;
+			    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+
+			    &:hover {
+					background: #212529;
+			    	color: #fff;
+			    }
+			}
+		}
+	}
+}
+
+.comment-reply-title {
+    font-size: 26px; 
+	
+	small {
+		a {
+		    margin-left: 15px;
+		    color: red;
+		    opacity: .7;
+		    text-transform: capitalize;
+		    font-size: 70%;
+		}
+	}
+}
+
 
 /* Widgets
 --------------------------------------------- */
@@ -1029,6 +1174,7 @@ body {
 			    color: #303030;
 			    text-decoration: none;
 			    margin-right: 3px;
+			    border: none;
 
 			    &.current,
 			    &:not(.dots):hover {
