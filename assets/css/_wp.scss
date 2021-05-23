@@ -379,7 +379,7 @@ textarea {
 	color: #646d70;
 	font-family: 'Rubik', serif;
 	font-size: 14px;
-    line-height: 26px;
+    line-height: 1.9;
 }
 
 h1,
@@ -397,7 +397,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 
 dfn,
@@ -408,7 +408,15 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	padding: 1em 1.5em;
+    border-left: 5px solid #eee;
+    font-size: 16px;
+
+	ol, ul, p {
+		&:last-child {
+		    margin-bottom: 0;
+		}
+	}
 }
 
 address {
@@ -508,6 +516,15 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+
+    td,
+    th {
+	    border-right: 1px solid #ddd;
+	    border-top: 1px solid #ddd;
+	    padding: 10px;
+	}
 }
 
 /* Links
@@ -668,14 +685,17 @@ article.page {
 		font-size: 28px;
 	    line-height: 36px;
 	    word-break: break-word;
+	    margin-bottom: 8px;
 
 		a {
 			text-decoration: none;
 		}
 	}
 
-	.entry-meta {
+	.entry-meta,
+	.entry-footer {
 	    font-size: 90%;
+	    clear: both;
 
 	    > span {
 		    margin-right: 15px;
@@ -694,15 +714,32 @@ article.page {
 
 	.entry-content {
 		margin: 1em 0 0;
+
+		a {
+			color: #646d70;
+		}
+
+		> ol, 
+		> ul {
+		    margin-bottom: 20px;
+		}
 	}
 
 	.btn {
 		font-family: Rubik;
-	    font-style: normal;
 	    font-weight: 500;
 	    font-size: 12px;
 	    line-height: 14px;
 	    padding: 10px 25px;
+	}
+}
+
+body {
+	&.page,
+	&.single {
+		.entry-content {
+			margin: 1.6em 0;
+		}
 	}
 }
 
@@ -724,12 +761,30 @@ article.page {
 }
 
 .page-content {
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1em;
+
+	a, span {
+		color: #212529;
+	    padding: 4px 8px;
+	    text-decoration: none;
+	    border-radius: 3px;
+	    border: 1px solid #212529;
+
+		&:hover {
+			background: #212529;
+			color: #fff;
+		}
+	}
+
+	span {
+		background: #212529;
+		color: #fff;
+	}
 }
 
 /* Comments
@@ -927,9 +982,37 @@ article.page {
 	margin-bottom: 1.5em;
 }
 
+.alignfull,
+.alignwide {
+	margin-left: calc(-100vw / 2 + 100% / 2);
+	margin-right: calc(-100vw / 2 + 100% / 2);
+	max-width: 100vw;
+}
+
 // Archive Pagination
-/* Archive Pagination */
 .navigation {
+	.nav-links {
+		a {
+		    border: 1px solid #212529;
+		    padding: 10px 20px;
+		    display: inline-block;
+		    border-radius: 3px;
+		    text-decoration: none;
+		    color: #212529;
+		    font-size: 12px;
+		    line-height: 16px;
+
+		    .nav-subtitle {
+		    	font-weight: 500;
+		    }
+
+		    &:hover {
+				background: #212529;
+				color: #fff;
+			}
+		}
+	}
+
 	&.pagination {
 	    display: block;
 	    text-align: center;

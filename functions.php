@@ -75,6 +75,10 @@ if ( ! function_exists( 'ecocabins_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		add_theme_support( 'responsive-embeds' );
+        add_theme_support( 'gutenberg', array( 'wide-images' => true ) );
+        add_theme_support( 'align-wide' );
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -101,7 +105,7 @@ add_action( 'after_setup_theme', 'ecocabins_setup' );
  * @global int $content_width
  */
 function ecocabins_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'ecocabins_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'ecocabins_content_width', 680 );
 }
 add_action( 'after_setup_theme', 'ecocabins_content_width', 0 );
 
