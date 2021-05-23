@@ -31,7 +31,7 @@ Installation
 ### Install Using FTP
 - Download the ecocabins from GitHub and unzip the folder
 - Launch your favorite FTP client. Such as FileZilla, FireFTP, CyberDuck etc. If you are a more advanced user, then you can use SSH too.
-- Upload the folder to `wp-content/plugins/`
+- Upload the folder to `wp-content/themes/`
 - Login to your WordPress Admin Panel
 - Go to Appearance → Themes
 - And `Activate` the EcoCabins theme
