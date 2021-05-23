@@ -13146,11 +13146,16 @@ textarea.form-control-lg {
 .bi-safe::before {
   content: "\f65a"; }
 
+body:not(.home) .site-header {
+  background-color: #222f33; }
+
+body:not(.home) .site-main {
+  padding-top: 100px; }
+
 .site-header {
   position: absolute;
   width: 100%;
-  z-index: 1;
-  background-color: #222f33; }
+  z-index: 1; }
   .site-header .navbar {
     padding: 35px 0; }
     .site-header .navbar .navbar-brand {
@@ -13486,8 +13491,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
+  font-size: 2.5em;
+  margin-bottom: 0.67em; }
 
 /* Grouping content
 	 ========================================================================== */
@@ -13963,60 +13968,6 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
-.main-navigation {
-  display: block;
-  width: 100%; }
-
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999; }
-
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0; }
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  display: block;
-  left: auto; }
-
-.main-navigation ul ul a {
-  width: 200px; }
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto; }
-
-.main-navigation li {
-  position: relative; }
-
-.main-navigation a {
-  display: block;
-  text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex; } }
-
 .site-main .comment-navigation,
 .site-main
 .posts-navigation,
@@ -14055,7 +14006,8 @@ article.post,
 article.page {
   background-color: #f9f9f9;
   padding: 25px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border-radius: 3px; }
   article.post .post-thumbnail,
   article.page .post-thumbnail {
     margin-bottom: 25px;
@@ -14082,6 +14034,9 @@ article.page {
     article.page .entry-meta a {
       color: #646d70;
       text-decoration: none; }
+  article.post .entry-content,
+  article.page .entry-content {
+    margin: 1em 0 0; }
   article.post .btn,
   article.page .btn {
     font-family: Rubik;
@@ -14094,10 +14049,16 @@ article.page {
 .updated:not(.published) {
   display: none; }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1em 0 0; }
+.page-header {
+  background: #f9f9f9;
+  padding: 100px 0; }
+  .page-header .page-title {
+    margin-bottom: 0; }
+  .page-header p {
+    margin-top: 15px; }
+
+.page-content {
+  padding: 60px 0; }
 
 .page-links {
   clear: both;
@@ -14116,7 +14077,8 @@ article.page {
 .widget {
   background-color: #f9f9f9;
   padding: 25px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border-radius: 3px; }
   .widget a {
     color: #646d70; }
   .widget select {

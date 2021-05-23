@@ -1,8 +1,17 @@
+body {
+	&:not(.home) {
+		.site-header {
+		    background-color: #222f33;
+		}
+		.site-main {
+		    padding-top: 100px;
+		}
+	}
+}
 .site-header {
     position: absolute;
     width: 100%;
     z-index: 1;
-    background-color: #222f33;
 
 	.navbar {
 	    padding: 35px 0;

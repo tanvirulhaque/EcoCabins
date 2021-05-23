@@ -25,9 +25,9 @@
 
 	<?php ecocabins_post_thumbnail(); ?>
 
-	<div class="entry-summary">
+	<div class="entry-content">
 		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php ecocabins_entry_footer(); ?>
